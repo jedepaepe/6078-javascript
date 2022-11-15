@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event - html</title>
+</head>
+<body>
+    <h1>Démo événement dans l'HTML</h1>
+    <div>
+        <button onclick="demoOnClick()">demo click</button>
+    </div>
+    <div id="text" style="display: none;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dignissimos illum necessitatibus corporis recusandae praesentium consectetur, quod sequi delectus, nemo architecto animi a obcaecati dolorem natus repudiandae ab vel facere?</p>
+        <p>Tempore illo cum eligendi temporibus inventore corporis officiis tenetur vel. Veritatis natus eaque sequi nobis cumque, aut ullam repudiandae numquam qui aliquid aliquam delectus doloremque. Odit ullam eligendi veritatis minima.</p>
+        <p>Nesciunt dolores temporibus maxime iste, repudiandae ad voluptatem optio reprehenderit itaque at, beatae eius. Vitae incidunt ullam dolorem quod nihil et dolor laborum reprehenderit officiis porro, temporibus accusantium debitis doloribus.</p>
+        <p>Nihil tenetur vel qui reiciendis ab laboriosam ex illo. Perspiciatis veritatis reprehenderit incidunt, dicta laboriosam aliquam mollitia hic labore quod fugiat, deleniti ipsum blanditiis sequi enim beatae suscipit harum id.</p>
+        <p>In perferendis asperiores consequatur omnis repellat rerum explicabo quam atque laudantium possimus. Laboriosam nam sit ducimus voluptas autem. Alias natus quos voluptatem, error veniam eligendi praesentium? Soluta expedita voluptates laudantium!</p>
+        <p>Corporis et pariatur consectetur, commodi similique, tenetur omnis error nihil tempore, voluptates ad incidunt explicabo voluptatum. Eos debitis sint modi? Rerum laudantium deleniti veniam exercitationem, nostrum sunt distinctio recusandae fugiat.</p>
+        <p>Accusamus repellat sed quisquam aperiam consequatur odit minima necessitatibus dignissimos eius officiis tempora porro accusantium natus rerum expedita ipsam tempore et eligendi nihil, magnam excepturi! Placeat rem atque sed quaerat.</p>
+        <p>Sint debitis vero voluptatibus. Ipsam, quis sequi commodi amet delectus impedit minus voluptatum, voluptate perferendis architecto ullam saepe quia nihil doloribus. Quaerat unde rem numquam, hic minima illum possimus ratione?</p>
+    </div>
+    <script>
+        // la bonne pratique veut que le code js doit être dans un fichier séparé
+        // mais nous dérogeons par soucis de pédagogie
+        function demoOnClick() {
+            document.getElementById("text").style.display = "block";
+        }
+    </script>
+</body>
+</html>
