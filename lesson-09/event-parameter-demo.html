@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>argument évent</title>
+</head>
+<body>
+    <div id="target" style="height: 5000px; border: 1px solid darkblue; background-color: aquamarine;"></div>
+    <script>
+        document.addEventListener("mousemove", triggeredFunction);
+
+        function triggeredFunction(event) {
+            console.log(event);
+            let p = document.createElement("p");
+            p.innerText = `${event.clientX} ${event.clientY}`;
+            document.getElementById("target").append(p);
+        }
+    </script>
+</body>
+</html>

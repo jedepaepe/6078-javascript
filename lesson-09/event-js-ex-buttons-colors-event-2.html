@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bouttons de couleurs</title>
+</head>
+<body>
+    <button class="button-color" data-color="yellow">jaune</button>
+    <button class="button-color" data-color="aqua">turquoise</button>
+    <button class="button-color" data-color="purple">violet</button>
+    <button class="button-color" data-color="red">rouge</button>
+    <button class="button-color" data-color="green">vert</button>
+    <button class="button-color" data-color="blue">bleu</button>
+    <button class="button-color" data-color="white">blanc</button>
+    <script>
+        document.querySelectorAll(".button-color")
+        .forEach(button => button.addEventListener("click", setBackgroundColor));
+
+        function setBackgroundColor(event) {
+            document.body.style.backgroundColor = event.target.getAttribute("data-color");
+        }
+</script>
+</body>
+</html>
