@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bouttons de couleurs</title>
+</head>
+<body>
+    <button id="button-yellow">jaune</button>
+    <button id="button-aqua">turquoise</button>
+    <button id="button-purple">violet</button>
+    <button id="button-red">rouge</button>
+    <button id="button-green">vert</button>
+    <button id="button-blue">bleu</button>
+    <button id="button-white">blanc</button>
+    <script>
+        document.getElementById("button-yellow").addEventListener("click", setYellowBackground);
+        document.getElementById("button-aqua").addEventListener("click", setAquaBackground);
+        document.getElementById("button-purple").addEventListener("click", setPurpleBackground);
+        document.getElementById("button-red").addEventListener("click", setRedBackground);
+        document.getElementById("button-green").addEventListener("click", setGreenBackground);
+        document.getElementById("button-blue").addEventListener("click", setBlueBackground);
+        document.getElementById("button-white").addEventListener("click", setWhiteBackground);
+
+        function setYellowBackground() {
+            document.body.style.backgroundColor = "yellow";
+        }
+
+        function setAquaBackground() {
+            document.body.style.backgroundColor = "aqua";
+        }
+        
+        function setPurpleBackground() {
+            document.body.style.backgroundColor = "purple";
+        }
+        
+        function setRedBackground() {
+            document.body.style.backgroundColor = "red";
+        }
+        
+        function setGreenBackground() {
+            document.body.style.backgroundColor = "green";
+        }
+        
+        function setBlueBackground() {
+            document.body.style.backgroundColor = "blue";
+        }
+        
+        function setWhiteBackground() {
+            document.body.style.backgroundColor = "white";
+        }
+</script>
+</body>
+</html>
