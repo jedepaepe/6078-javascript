@@ -6,14 +6,23 @@
     <title>bouttons de couleurs</title>
 </head>
 <body>
-    <button onclick="setYellowBackground()">jaune</button>
-    <button onclick="setAquaBackground()">turquoise</button>
-    <button onclick="setPurpleBackground()">violet</button>
-    <button onclick="setRedBackground()">rouge</button>
-    <button onclick="setGreenBackground()">vert</button>
-    <button onclick="setBlueBackground()">bleu</button>
-    <button onclick="setWhiteBackground()">blanc</button>
+    <button id="button-yellow">jaune</button>
+    <button id="button-aqua">turquoise</button>
+    <button id="button-purple">violet</button>
+    <button id="button-red">rouge</button>
+    <button id="button-green">vert</button>
+    <button id="button-blue">bleu</button>
+    <button id="button-white">blanc</button>
     <script>
+        document.getElementById("button-yellow").onclick = setYellowBackground;
+        document.getElementById("button-aqua").onclick = setAquaBackground;
+        document.getElementById("button-purple").onclick = setPurpleBackground;
+        document.getElementById("button-red").onclick = setRedBackground;
+        document.getElementById("button-green").onclick = setGreenBackground;
+        document.getElementById("button-blue").onclick = setBlueBackground;
+        document.getElementById("button-white").onclick = setWhiteBackground;
+
+
         function setYellowBackground() {
             document.body.style.backgroundColor = "yellow";
         }
@@ -41,6 +50,6 @@
         function setWhiteBackground() {
             document.body.style.backgroundColor = "white";
         }
-    </script>
+</script>
 </body>
 </html>
