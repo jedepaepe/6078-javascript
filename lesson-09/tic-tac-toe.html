@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .tic-tac-toe {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        .tic-tac-toe > div {
+            border: 1px white solid;
+            font-family: sans-serif;
+            font-size: 80px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>tic tac toe</h1>
+    <div id="tic-tac-toe" class="tic-tac-toe">
+        <div id="cell-1"></div>
+        <div id="cell-2"></div>
+        <div id="cell-3"></div>
+        <div id="cell-4"></div>
+        <div id="cell-5"></div>
+        <div id="cell-6"></div>
+        <div id="cell-7"></div>
+        <div id="cell-8"></div>
+        <div id="cell-9"></div>
+    </div>
+    <script>
+        document.getElementById("cell-1").addEventListener("click", writeXInCell1);
+        document.getElementById("cell-2").addEventListener("click", writeXInCell2);
+        document.getElementById("cell-3").addEventListener("click", writeXInCell3);
+        document.getElementById("cell-4").addEventListener("click", writeXInCell4);
+        document.getElementById("cell-5").addEventListener("click", writeXInCell5);
+        document.getElementById("cell-6").addEventListener("click", writeXInCell6);
+        document.getElementById("cell-7").addEventListener("click", writeXInCell7);
+        document.getElementById("cell-8").addEventListener("click", writeXInCell8);
+        document.getElementById("cell-9").addEventListener("click", writeXInCell9);
+
+        function writeXInCell1() {
+            document.getElementById("cell-1").innerText = "X";
+        }
+        function writeXInCell2() {
+            document.getElementById("cell-2").innerText = "X";
+        }
+        function writeXInCell3() {
+            document.getElementById("cell-3").innerText = "X";
+        }
+        function writeXInCell4() {
+            document.getElementById("cell-4").innerText = "X";
+        }
+        function writeXInCell5() {
+            document.getElementById("cell-5").innerText = "X";
+        }
+        function writeXInCell6() {
+            document.getElementById("cell-6").innerText = "X";
+        }
+        function writeXInCell7() {
+            document.getElementById("cell-7").innerText = "X";
+        }
+        function writeXInCell8() {
+            document.getElementById("cell-8").innerText = "X";
+        }
+        function writeXInCell9() {
+            document.getElementById("cell-9").innerText = "X";
+        }
+    </script>
+</body>
+</html>
