@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .tic-tac-toe {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        .tic-tac-toe > div {
+            border: 1px white solid;
+            font-family: sans-serif;
+            font-size: 80px;
+            height: 100px;
+            line-height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>tic tac toe</h1>
+    <div id="tic-tac-toe" class="tic-tac-toe"></div>
+    <script>
+        const cells = document.getElementById("tic-tac-toe");
+        
+        createCell(cells);
+        createCell(cells);
+        createCell(cells);
+        createCell(cells);
+        createCell(cells);
+        createCell(cells);
+        createCell(cells);
+        createCell(cells);
+        createCell(cells);
+
+        /**
+         * crée une cellule du tic-tac-toe
+         **/
+        function createCell(parent) {
+            const cell = document.createElement("div");
+            cell.addEventListener("click", writeX)
+            function writeX() {
+                cell.innerText = "X";
+            }
+            parent.append(cell);
+        }
+
+    </script>
+</body>
+</html>
