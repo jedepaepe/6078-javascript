@@ -30,27 +30,17 @@
 <body>
     <h1>tic tac toe</h1>
     <div id="tic-tac-toe" class="tic-tac-toe">
-        <div id="cell-1"></div>
-        <div id="cell-2"></div>
-        <div id="cell-3"></div>
-        <div id="cell-4"></div>
-        <div id="cell-5"></div>
-        <div id="cell-6"></div>
-        <div id="cell-7"></div>
-        <div id="cell-8"></div>
-        <div id="cell-9"></div>
+        <div id="cell-1" onclick="writeXInCell1()"></div>
+        <div id="cell-2" onclick="writeXInCell2()"></div>
+        <div id="cell-3" onclick="writeXInCell3()"></div>
+        <div id="cell-4" onclick="writeXInCell4()"></div>
+        <div id="cell-5" onclick="writeXInCell5()"></div>
+        <div id="cell-6" onclick="writeXInCell6()"></div>
+        <div id="cell-7" onclick="writeXInCell7()"></div>
+        <div id="cell-8" onclick="writeXInCell8()"></div>
+        <div id="cell-9" onclick="writeXInCell9()"></div>
     </div>
     <script>
-        document.getElementById("cell-1").addEventListener("click", writeXInCell1);
-        document.getElementById("cell-2").addEventListener("click", writeXInCell2);
-        document.getElementById("cell-3").addEventListener("click", writeXInCell3);
-        document.getElementById("cell-4").addEventListener("click", writeXInCell4);
-        document.getElementById("cell-5").addEventListener("click", writeXInCell5);
-        document.getElementById("cell-6").addEventListener("click", writeXInCell6);
-        document.getElementById("cell-7").addEventListener("click", writeXInCell7);
-        document.getElementById("cell-8").addEventListener("click", writeXInCell8);
-        document.getElementById("cell-9").addEventListener("click", writeXInCell9);
-
         function writeXInCell1() {
             document.getElementById("cell-1").innerText = "X";
         }
