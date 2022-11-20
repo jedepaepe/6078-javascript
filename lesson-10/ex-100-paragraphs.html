@@ -10,7 +10,7 @@
     <script>
         let container = document.getElementById("container");
         for (let i = 0; i < 100; ++i) {
-            let p = document.createElement("p");
+            const p = document.createElement("p");
             p.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
             container.append(p);
         }
