@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuiles</title>
+    <style>
+        body {
+            background-color: hsl(50 100% 94%);
+            color: hsl(50 100% 22%);
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .header h1 {
+            text-align: center;
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1em;
+        }
+
+        .tiles h3 {
+            text-align: center;
+        }
+            </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Tuiles - createElement</h1>
+    </header>
+    <main>
+        <div id="tiles" class="tiles">
+        </div>
+    </main>
+    <footer>&copy;epfc</footer>
+    <script>
+        /**
+         * crée une tuile
+         * @param {string} title est le titre de la tuile
+         * @param {string} image est l'url de l'image de la tuile
+         * @param {string} paragraph est le texte de la tuile
+         * @return {Element} le <div> "tuile"
+         */
+        function createTile(title, image, paragraph) {
+            const root = document.createElement("div");
+            const h3 = document.createElement("h3");
+            h3.append(document.createTextNode(title));
+            root.append(h3);
+            const div = document.createElement("div");
+            const img = document.createElement("img");
+            img.src = image;
+            img.alt = title;
+            div.append(img);
+            const p = document.createElement("p");
+            p.append(document.createTextNode(paragraph));
+            div.append(p);
+            root.append(div);
+            return root;
+        }
+
+        const tiles = document.getElementById("tiles");
+        const firstNames = ["Josette", "Léo", "Stéphanie", "Alfred", "Noémie", "Christian", "Renée", "Jo", "Julie", "Marc", "Roberte", "Claude"];
+        firstNames.forEach(fn =>
+            tiles.append(createTile(fn, "https://via.placeholder.com/300x200.png", "Lorem ipsum dolor sit amet consectetur adipisicing elit."))
+        );
+    </script>
+</body>
+</html>
