@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maison</title>
+</head>
+<body>
+    <h1>Maison</h1>
+    <div id="container"></div>
+    <script>
+        fetch("/rooms")
+        .then(function (response) { return response.json(); })
+        .then(function (rooms) { 
+            const ul = document.createElement("ul");
+            for (let i = 0; i < rooms.length; ++i) {
+                const c = rooms[i];
+                const li = document.createElement("li");
+                li.innerText = `${c.id} ${c.type}, étage ${c.floor}, ${c.area}m2, ${c.description} `;
+                ul.append(li);
+            }
+            document.getElementById("container").append(ul);
+        });
+    </script>
+</body>
+</html>
