@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+</head>
+<body>
+    <h1>products</h1>
+    <div id="container"></div>
+    <script>
+        fetch("/products")
+        .then(function (response) { return response.json(); })
+        .then(function (products) { 
+            const ul = document.createElement("ul");
+            products.forEach(c => {
+                const li = document.createElement("li");
+                li.innerText = `${c.id} ${c.label} ${c.price}€ ${c.description}`;
+                ul.append(li);
+            });
+            document.getElementById("container").append(ul);
+        });
+    </script>
+</body>
+</html>
