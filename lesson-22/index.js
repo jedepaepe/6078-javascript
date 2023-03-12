@@ -12,7 +12,7 @@ async function main() {
     const app = express();
     app.use(bodyParser.json());
     
-    app.post("/employee", async (request, response) => {
+    app.post("/personel", async (request, response) => {
         try {
             const result = await collection.insertOne(request.body);
             response.status(201).send(result);
@@ -21,7 +21,7 @@ async function main() {
         }
     });
 
-    app.get("/employee", async (request, response) => {
+    app.get("/personel", async (request, response) => {
         try {
             const data = await collection.find().toArray();
             response.json(data);
@@ -30,7 +30,7 @@ async function main() {
         }
     });
 
-    app.get("/employee/:id", async (request, response) => {
+    app.get("/personel/:id", async (request, response) => {
         try {
             const data = await collection.findOne({
                 _id: new ObjectId(request.params.id)
