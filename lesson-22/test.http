@@ -1,0 +1,15 @@
+###
+POST http://localhost:3000/employee
+Content-Type: application/json
+
+{
+    "firstName": "Margarette",
+    "lastName": "Xion"
+}
+
+###
+GET http://localhost:3000/employee
+
+
+###
+GET http://localhost:3000/employee/6408da5aa841eb69e973a048
