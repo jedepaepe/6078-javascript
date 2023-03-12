@@ -64,9 +64,11 @@
 
         const tiles = document.getElementById("tiles");
         const firstNames = ["Josette", "Léo", "Stéphanie", "Alfred", "Noémie", "Christian", "Renée", "Jo", "Julie", "Marc", "Roberte", "Claude"];
-        firstNames.forEach(fn =>
-            tiles.append(createTile(fn, "https://via.placeholder.com/300x200.png", "Lorem ipsum dolor sit amet consectetur adipisicing elit."))
-        );
+        firstNames.forEach(appendTile);
+
+        function appendTile(firstname) {
+            tiles.append(createTile(firstname, "https://via.placeholder.com/300x200.png", "Lorem ipsum dolor sit amet consectetur adipisicing elit."));
+        }
     </script>
 </body>
 </html>
