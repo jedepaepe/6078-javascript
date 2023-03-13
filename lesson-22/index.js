@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 async function main() {
-    const uri = "mongodb+srv://6078-javascript:<<password>>@cluster0.vgckisb.mongodb.net/?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://6078-javascript:<<password>>@<<your-cluster>>.mongodb.net/?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
     await client.connect();
     console.log("db connected");
