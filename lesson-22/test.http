@@ -1,3 +1,4 @@
+# créer une ressource personel
 ###
 POST http://localhost:3000/personel
 Content-Type: application/json
@@ -7,9 +8,26 @@ Content-Type: application/json
     "lastName": "Xion"
 }
 
+# récupérer la liste du personel
 ###
 GET http://localhost:3000/personel
 
 
+# récupérer la ressource personel d'identifiant 6408da5aa841eb69e973a048
 ###
 GET http://localhost:3000/personel/6408da5aa841eb69e973a048
+
+
+# modifier la ressource personnel d'identiant 6408da5aa841eb69e973a048
+###
+PUT http://localhost:3000/personel/6408da5aa841eb69e973a048
+Content-Type: application/json
+
+{
+    "firstName": "Mélanie",
+    "lastName": "Dubois"
+}
+
+# supprime la ressource personnel d'identifiant
+###
+DELETE http://localhost:3000/personel/6408da5aa841eb69e973a048
