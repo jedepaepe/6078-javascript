@@ -31,3 +31,19 @@ Content-Type: application/json
 # supprime la ressource personnel d'identifiant
 ###
 DELETE http://localhost:3000/personel/6408da5aa841eb69e973a048
+
+
+# ajoute quelque chose de stupide
+###
+POST http://localhost:3000/personel
+Content-Type: application/json
+
+{
+    "greetings": "hi",
+    "name": "Pierot le lunaire",
+    "collection": [1, "coucou", "yes", false],
+    "obj": {
+        "a": 1,
+        "b": 2
+    }
+}
