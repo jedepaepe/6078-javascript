@@ -1,4 +1,5 @@
 *.vscode
+*/node_modules
 dmb-website-true
 exploration-04
 css-grid
