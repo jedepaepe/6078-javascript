@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 const express = require("express");
 
 async function main() {
-    const uri = "mongodb://127.0.0.1:27017";
+    const uri = "mongodb+srv://<user>:<password>@<server>/?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
     await client.connect();
     console.log("db connected");
@@ -12,9 +12,10 @@ async function main() {
 
     app.use(express.static("public"));
 
-    app.get("/tiles", function (request, response) {
+    app.get("/tiles", async function (request, response) {
         try {
-            const tiles = client.db("contacts").collection("tiles").find().toArray();
+            const tiles = await client.db("contacts").collection("tiles").find().toArray();
+            console.log(tiles);
             response.json(tiles);
         } catch (err) {
             response.status(500).send(error);
