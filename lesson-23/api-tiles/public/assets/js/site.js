@@ -22,12 +22,11 @@ function createTile(title, image, paragraph) {
     return root;
 }
 
-fetch("/tiles")
-.then(function (response) { return response.json() })
-.then(function (tiles) {
+async function main() {
+    const response = await fetch("/tiles");
+    const tiles = await response.json();
     let parent = document.getElementById("tiles");
-    for(let i = 0; i < tiles.length; ++i) {
-        const t = tiles[i];
-        parent.append(createTile(t.title, t.image, t.paragraph));
-    }
-})
+    tiles.forEach(t => parent.append(createTile(t.title, t.image, t.paragraph)));
+}
+
+main().catch(console.err);
