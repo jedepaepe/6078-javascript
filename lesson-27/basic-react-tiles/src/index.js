@@ -41,7 +41,7 @@ class Footer extends React.Component {
 
 class Root extends React.Component {
     render = () => <div>
-        <Header />
+        <Header/>
         <Tiles/>
         <Footer/>
     </div>;
