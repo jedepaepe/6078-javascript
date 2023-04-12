@@ -43,7 +43,7 @@ class Root extends React.Component {
     render = () => <div>
         <Header />
         <Tiles/>
-        <Footer></Footer>
+        <Footer/>
     </div>;
 }
 
