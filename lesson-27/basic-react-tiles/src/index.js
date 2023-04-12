@@ -2,6 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+class Header extends React.Component {
+    render = () => <header className="header">
+        <h1>Tuiles - React</h1>
+        </header>
+}
+
 class Tile extends React.Component {
     render = () => <div>
         <h3>Alfred</h3>
@@ -13,7 +19,7 @@ class Tile extends React.Component {
 }
 
 class Tiles extends React.Component {
-    render = () => <div className="tiles">
+    render = () => <main><div className="tiles">
         <Tile/>
         <Tile/>
         <Tile/>
@@ -26,7 +32,19 @@ class Tiles extends React.Component {
         <Tile/>
         <Tile/>
         <Tile/>
+    </div></main>;
+}
+
+class Footer extends React.Component {
+    render = () => <footer>&copy;epfc</footer>;
+}
+
+class Root extends React.Component {
+    render = () => <div>
+        <Header />
+        <Tiles/>
+        <Footer></Footer>
     </div>;
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Tiles/>);
+ReactDOM.createRoot(document.getElementById("root")).render(<Root/>);
