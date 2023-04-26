@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuiles - createElement</title>
+    <link rel="stylesheet" href="assets/css/site.css">
+    <style>
+        body {
+            background-color: hsl(50 100% 94%);
+            color: hsl(50 100% 22%);
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .header h1 {
+            text-align: center;
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1em;
+        }
+
+        .tiles h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Tuiles - createElement</h1>
+    </header>
+    <main>
+        <div id="tiles" class="tiles">
+        </div>
+    </main>
+    <footer>&copy;epfc</footer>
+    <script>
+        class Tile {
+            constructor(title, image, paragraph) {
+                this.title = title;
+                this.image = image;
+                this.paragraph = paragraph;
+            }
+            createElement() {
+                const root = document.createElement("div");
+                const h3 = document.createElement("h3");
+                h3.append(document.createTextNode(this.title));
+                root.append(h3);
+                const div = document.createElement("div");
+                const img = document.createElement("img");
+                img.src = this.image;
+                img.alt = this.title;
+                div.append(img);
+                const p = document.createElement("p");
+                p.append(document.createTextNode(this.paragraph));
+                div.append(p);
+                root.append(div);
+                return root;
+            }
+        }
+
+        const tiles = document.getElementById("tiles");
+        tiles.append(new Tile("Alfred", "https://via.placeholder.com/300x200.png", "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Sarah", "https://via.placeholder.com/300x200.png", "2 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Josette", "https://via.placeholder.com/300x200.png", "3 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Romain", "https://via.placeholder.com/300x200.png", "4 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+
+        tiles.append(new Tile("Didier", "https://via.placeholder.com/300x200.png", "5 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Joëlle", "https://via.placeholder.com/300x200.png", "6 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Susa", "https://via.placeholder.com/300x200.png", "7 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Françoise", "https://via.placeholder.com/300x200.png", "8 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+
+        tiles.append(new Tile("Romane", "https://via.placeholder.com/300x200.png", "9 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("René", "https://via.placeholder.com/300x200.png", "10 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Joseph", "https://via.placeholder.com/300x200.png", "11 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+        tiles.append(new Tile("Milo", "https://via.placeholder.com/300x200.png", "12 Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+            .createElement());
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Point {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            length() {
+                return Math.sqrt(this.x * this.x + this.y * this.y);
+            }
+            toString() {
+                return `x = ${this.x}, y = ${this.y}`;
+            }
+            addition(point) {
+                return new Point(this.x + point.x, this.y + point.y);
+            }
+            substraction(point) {
+                return new Point(this.x - point.x, this.y - point.y);
+            }
+        }
+        p1 = new Point(1, 0);
+        console.log(p1.x);
+        console.log(p1.y);
+        console.log(p1.toString());
+        p2 = new Point(10, 20);
+        console.log(p1.addition(p2));
+        console.log(p1.substraction(p2));
+    </script>
+</body>
+</html>

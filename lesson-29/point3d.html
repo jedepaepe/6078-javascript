@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Point {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            length() {
+                return Math.sqrt(this.x * this.x + this.y * this.y);
+            }
+            toString() {
+                return `x = ${this.x}, y = ${this.y}`;
+            }
+            addition(point) {
+                return new Point(this.x + point.x, this.y + point.y);
+            }
+            substraction(point) {
+                return new Point(this.x - point.x, this.y - point.y);
+            }
+        }
+
+        class Point3D extends Point {
+            constructor(x, y, z) {
+                super(x, y);
+                this.z = z;
+            }
+            length() {
+                return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+            }
+            toString() {
+                return `${super.toString()}, z = ${this.z}`;
+            }
+            addition(point) {
+                const add2d = super.addition(point);
+                return new Point3D(add2d.x, add2d.y, this.z + point.z);
+            }
+            substraction(point) {
+                const sub2d = super.substraction(point);
+                return new Point3D(sub2d.x, sub2d.y, this.z - point.z);
+            }
+        }
+    </script>
+</body>
+</html>
